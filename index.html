@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>Accordian</title>
+
+	<style type="text/css">
+
+.accordian-head{ 
+cursor: hand;
+cursor: pointer;
+padding: 2px 5px;
+border: 1px solid gray;
+background: #E1E1E1;
+}
+.accordian-content {
+	display:none;
+}
+.active{ /*class added to contents of 1st demo when they are open*/
+background: yellow;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+<div class="accordian-head">Dogs</div>
+<div class="accordian-content">
+<img src="http://i10.tinypic.com/7xlrga1.jpg" />
+The dog is a domestic subspecies of the wolf, a mammal of the Canidae family of the order Carnivora. The term encompasses both feral and pet varieties and is also sometimes used to describe wild canids of other subspecies or species. The domestic dog has been (and continues to be) one of the most widely-kept working and companion animals in human history, as well as being a food source in some cultures.
+</div>
+
+<div class="accordian-head">Cats</div>
+<div class="accordian-content">
+The Cat, also known as the Domestic Cat or House Cat to distinguish it from other felines, is a small carnivorous species of crepuscular mammal that is often valued by humans for its companionship and its ability to hunt vermin. It has been associated with humans for at least 9,500 years.
+</div>
+
+<div class="accordian-head">Rabbits</div>
+<div class="accordian-content">
+Rabbits are small mammals in the family Leporidae of the order Lagomorpha, found in several parts of the world. There are seven different genera in the family classified as rabbits, including the European rabbit (Oryctolagus cuniculus), cottontail rabbit (genus Sylvilagus; 13 species), and the Amami rabbit (Pentalagus furnessi, endangered species on Amami O-shima, Japan). There are many other species of rabbit, and these, along with cottontails, pikas, and hares, make up the order Lagomorpha. Rabbits generally live between four and twenty years.
+</div>
+
+</body>
+  <script src="js/jquery.1.11.1.js"></script>
+  <script src="js/accordian.js"></script>
+	  <script type="text/javascript"> 
+		var a = new  accordian({
+			headClass: "accordian-head", //Shared CSS class name of headers group
+		    contentClass: "accordian-content", //Shared CSS class name of contents group
+		    speed: "fast",
+		    openClass: "active"
+		});
+
+		a.init();
+		a.expand(1);
+		a.expandAll();
+		a.collapseAll();
+
+</script>
+
+
+</html>
